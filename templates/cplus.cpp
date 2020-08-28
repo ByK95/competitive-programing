@@ -6,5 +6,7 @@ using namespace std;
 #define RP(i,a,b) for (int i = a; i < b; i++)
 
 int main() {
-
+    cin.tie(0);
+    cout.tie(0);
+    
 }
