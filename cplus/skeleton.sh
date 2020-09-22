@@ -10,3 +10,5 @@ fi
 mkdir $1
 cd $1
 cp ../../templates/cplus.cpp ./"$1.cpp"
+cd "$1"
+git checkout -b "$1"
