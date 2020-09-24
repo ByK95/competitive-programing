@@ -8,7 +8,6 @@ if [ $# -eq 0 ]
 fi
 
 mkdir $1
-cd $1
-cp ../../templates/cplus.cpp ./"$1.cpp"
 cd "$1"
+cp ../../templates/cplus.cpp ./"$1.cpp"
 git checkout -b "$1"
