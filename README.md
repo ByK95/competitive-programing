@@ -6,4 +6,4 @@
 	cp cplus.cpp ~/.config/geany/templates/files/
 	
 	# Edit Build Command
-	g++ -std=c++11 -O2 -Wall test.cpp -o test
+	g++ -std=c++11 -O2 -Wall test.cpp -o prog
