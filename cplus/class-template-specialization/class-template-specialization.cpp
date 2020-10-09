@@ -13,15 +13,35 @@ enum class Color { red, green, orange };
 
 template <typename T> struct Traits;
 
-template <class T>
-struct Traits
+template <typename T> struct Traits
 {
-    T element;
-    public:
-        static string name(int i){
-            // T n = static_cast<T>(i);
-            return "h";
+    static std::string name(int index) { return "unknown"; }
+};
+
+template<> struct Traits<Fruit>
+{
+    static std::string name(int index)
+    {
+        switch((Fruit)index) {
+        case Fruit::apple:      return "apple";
+        case Fruit::orange:     return "orange";
+        case Fruit::pear:       return "pear";
+        default:                return "unknown";
         }
+    }
+};
+
+template<> struct Traits<Color>
+{
+    static std::string name(int index)
+    {
+        switch((Color)index) {
+        case Color::red:        return "red";
+        case Color::green:      return "green";
+        case Color::orange:     return "orange";
+        default:                return "unknown";
+        }
+    }
 };
 
 
